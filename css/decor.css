@@ -248,6 +248,11 @@ h4, h5, h6, .h4, .h5, .h6 {
 	line-height: 55px;
 }
 
+.adaptive .umi-menu ul.level-0 li.last a {
+background:none;
+}
+
+
 .adaptive .umi-menu ul.level-0 li:hover a {
 	border-top: none;
 	height: 55px;
@@ -261,7 +266,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 
 .adaptive .umi-menu .in.collapse ul.level-0>li.current>a {
-	box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15) inset;
+	/* box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15) inset; */
 	border-top: none;
 	padding: 0 20px 0 15px;
 	background: none;
@@ -270,8 +275,8 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 
 .adaptive .umi-menu .in.collapse ul.level-0>li.current:hover>a {
-	background: #FFF;
-	color: #000;
+/* 	background: #FFF;
+	color: #000; */
 }
 
 .adaptive .umi-menu ul.level-0>li.current>a {
@@ -280,7 +285,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 	height: 55px;
 	line-height: 55px;
 	background: none;
-	color: #372427;
+	color: #525252;
 	text-shadow:none;
     background: url("/img/marker_nav.png") right no-repeat;
 }
@@ -365,6 +370,46 @@ h4, h5, h6, .h4, .h5, .h6 {
 	float: left;
 	list-style: none;
 	background: #FFF;
+	padding: 0;
+	margin: 0;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+
+	background: #FD6170;
+	-webkit-box-shadow: 0px 5px 8px 0px rgba(50, 50, 50, 0.21);
+	-moz-box-shadow:    0px 5px 8px 0px rgba(50, 50, 50, 0.21);
+	box-shadow:         0px 5px 8px 0px rgba(50, 50, 50, 0.21);
+	background: url("/img/ribbed_bg.png") right repeat;
+}
+
+.adaptive .umi-menu ul.level-0 li.hover>ul.level-1 {
+	display: block;
+
+}
+
+
+/* dropdown secondary menu items */
+.adaptive .umi-menu ul.level-0 li>ul.level-1 li ul {
+	display: none;
+
+}
+
+.adaptive .umi-menu ul.level-0 li.hover>ul.level-1 li.hover ul {
+		display: none;
+	min-width: 220px;
+	position: absolute;
+	top: 0;
+/* 	left: -6px; */
+
+	z-index: 10000;
+	float: left;
+	list-style: none;
+	background: #FFF;
 	padding: 15px;
 	margin: 0;
 	border: none;
@@ -376,19 +421,40 @@ h4, h5, h6, .h4, .h5, .h6 {
 	background-clip: padding-box;
 
 	background: #FD6170;
-	-webkit-box-shadow: 0px 5px 8px 0px rgba(50, 50, 50, 0.21);  -moz-box-shadow:    0px 5px 8px 0px rgba(50, 50, 50, 0.21);  box-shadow:         0px 5px 8px 0px rgba(50, 50, 50, 0.21);
+	-webkit-box-shadow: 0px 5px 8px 0px rgba(50, 50, 50, 0.21);
+	-moz-box-shadow:    0px 5px 8px 0px rgba(50, 50, 50, 0.21);
+	box-shadow:         0px 5px 8px 0px rgba(50, 50, 50, 0.21);
 	background: url("/img/ribbed_bg.png") right repeat;
+	display: block;
+	position:absolute;
+
+		left: 220px;
+
 }
 
-.adaptive .umi-menu ul.level-0 li.hover>ul.level-1 {
-	display: block;
-}
+/*end dropdown secondary menu items */
+
+
 
 .adaptive .umi-menu ul.level-0 li>ul.level-1 li {
 	float: none;
 	height: auto;
 
 	/* background: #FD6170; */
+	padding: 5px 15px 5px 15px;
+}
+li.have_childe:before{
+	content: "►";
+	float: right;
+	position:absolute;
+	top:-8px;
+	right:10px;
+	font-size:0.7em;
+	color:#fff;
+}
+
+li:hover.have_childe:before{
+color:inherit;
 }
 
 .adaptive .umi-menu ul.level-0 li>ul.level-1 li a {
@@ -2787,6 +2853,13 @@ html.adaptive body .system_errors ul {
 	.adaptive .umi-menu ul.level-0 li a {
 		font-size: 11px;
 	}
+
+	.adaptive .umi-menu ul.level-0 li.hover>ul.level-1 li.hover ul {
+		left: 0;
+	}
+
+
+
 }
 
 @media (max-width:767px) {
@@ -3040,6 +3113,15 @@ html.adaptive body .system_errors ul {
 	.adaptive .f-fluid {
 		width: auto;
 	}
+
+	.adaptive .umi-menu ul.level-0 li.hover>ul.level-1 li.hover ul {
+		left: 0;
+		top:40px;
+	}
+
+
+
+
 }
 
 @media (max-width:600px) {
@@ -3572,6 +3654,13 @@ html.adaptive body .system_errors ul {
 .adaptive .foot-icon.sup-ic {
     background: rgba(0, 0, 0, 0.1) url("/img/sup.png") no-repeat 50% 50%;
 }
+.adaptive .foot-icon.cart-ic {
+    background: rgba(0, 0, 0, 0.1) url("/img/carter.png") no-repeat 50% 50%;
+}
+.adaptive .foot-icon.size-ic {
+    background: rgba(0, 0, 0, 0.1) url("/img/size.png") no-repeat 50% 50%;
+}
+
 
 #system_basket .cart_item_name a {
     color: #f74b56;

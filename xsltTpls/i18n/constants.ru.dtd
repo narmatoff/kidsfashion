@@ -95,6 +95,11 @@
 <!ENTITY basket-items-text "на сумму">
 <!ENTITY basket-back-to-cart "Назад в корзину">
 
+<!ENTITY footer-client-title "клиентам">
+<!ENTITY footer-contact-title "контакты">
+<!ENTITY footer-social-title "вконтакте">
+
+
 <!ENTITY previous-page "Предыдущая">
 <!ENTITY next-page "Следующая">
 

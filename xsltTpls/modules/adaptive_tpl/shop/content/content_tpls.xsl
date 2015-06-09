@@ -7,6 +7,13 @@
 		<div class="row-fluid for-umi-slider">
 			<div class="span12 pos-rel">
 				<div class="container">
+
+																				<xsl:call-template name="order_button"/>
+
+
+
+
+
 					<div class="carousel">
 						<!-- Carousel items -->
 						<div class="carousel-inner">
@@ -152,7 +159,45 @@
 				<div class="container">
 					<div class="grey-zone pos-rel">
 						<div class="row-fluid" id='footer-carousel'>
-							<div class="span3 social_new">
+							<div class="span3">
+								<div class="foot-h1">
+									&footer-client-title;
+									<div class="r-line">.</div>
+								</div>
+								<div class="foot-box-wr">
+									<div class="foot-box min">
+										<div class="foot-icon cart-ic">.</div>
+										<p>
+											<a href="/emarket/cart/">&my_basket;</a>
+										</p>
+									</div>
+									<div class="foot-box min">
+										<div class="foot-icon deliv-ic">.</div>
+										<p>
+											<a href="/emarket/personal/">&private_office;</a>
+										</p>
+									</div>
+									<div class="foot-box min">
+										<div class="foot-icon size-ic">.</div>
+										<p>
+											<a href="/size/">Таблица размеров</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="span3">
+								<div class="foot-h1">
+									&footer-contact-title;
+									<div class="r-line">.</div>
+								</div>
+							</div>
+							<div class="span3">
+								<div class="foot-h1">
+									&footer-social-title;
+									<div class="r-line">.</div>
+								</div>
+							</div>
+							<!-- <div class="span3 social_new">
 								<div class="foot-h1" umi:element-id="{$infoPageId}" umi:empty="&empty;" umi:field-name="professiya_ili_slogan">
 									<xsl:apply-templates select="$infoPage/property[@name = 'professiya_ili_slogan']"/>
 									<div class="r-line">.</div>
@@ -196,7 +241,7 @@
 							</div>
 							<div class="span3">
 								<xsl:call-template name="custom_block_2"/>
-							</div>
+							</div> -->
 
 							<!-- <div class="span3 span-vk">
 								<div class="foot-h1">

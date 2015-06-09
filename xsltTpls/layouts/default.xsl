@@ -133,7 +133,7 @@
 					<xsl:with-param name="tpl" select="'footer_s1'"/>
 				</xsl:apply-templates>
 
-				<xsl:call-template name="order_button"/>
+<!--				<xsl:call-template name="order_button"/>-->
 			</body>
 		</html>
 	</xsl:template>

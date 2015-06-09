@@ -382,11 +382,11 @@
 		</div>
 	</xsl:template>
 
-	<!--Кнопка заказать-->
+	<!--Кнопка обратная связь/заказать-->
 	<xsl:template name="order_button">
 		<xsl:param name="empty-image">/base-img/feedback_button.jpg</xsl:param>
         <xsl:if test="not($infoPagePreferences/property[@name = 'disabled_feedback']/value = 1)">
-            <a id="main_big_order_button" class="callback" href="#ajax#ajax-order-form.{$pageId}.ajax" title="{$infoPageForm/property[@name = 'order_form_title']/value}">
+            <a id="main_big_order_button" class="callback" href="#ajax#ajax-order-form.{$pageId}.ajax" title="{$infoPageForm/property[@name = 'order_form_title']/value}">Обратная связь
                 <xsl:variable name="path">
 					<xsl:choose>
 						<xsl:when test="$infoPageForm/property[@name = 'order_button_img']/value">
@@ -396,7 +396,7 @@
 					</xsl:choose>
 				</xsl:variable>
 				<xsl:variable name="thumbnail" select="document(concat('udata://custom/makeThumbnailSqueeze/(.',$path,')/60/auto/void/0/7/'))/udata"/>
-				<div class="thumbnail_holder" umi:element-id="{$infoPageId}" umi:field-name="order_button_img" umi:field-type="img_file" style="max-width:60px;width:{$thumbnail/width}px;height:{$thumbnail/height}px;background-image:url({$thumbnail/src})" rel="{$thumbnail/src}"></div>
+				<div class="thumbnail_holder" umi:element-id="{$infoPageId}" umi:field-name="order_button_img" umi:field-type="img_file" rel="{$thumbnail/src}"></div>
             </a>
         </xsl:if>
 	</xsl:template>

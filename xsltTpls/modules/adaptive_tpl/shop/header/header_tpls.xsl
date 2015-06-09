@@ -82,11 +82,13 @@
 			<div class="span12 pos-rel">
 				<div class="cover-two"></div>
 				<div class="container">
+
 					<div class="row-fluid umi-menu">
 						<div class="span12">
 							<div class="navbar">
 								<div class="navbar-inner">
 									<div class="container">
+
 										<button type="button" class="btn btn-umi-shop b-navbar" data-toggle="collapse"
 												data-target=".nav-collapse">&empty-collaple-menu;
 										</button>

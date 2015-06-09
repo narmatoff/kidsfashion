@@ -83,9 +83,10 @@
 		<xsl:param name="level" />
 		<li umi:element-id="{@id}" umi:region="row">
 			<xsl:attribute name="class">
-				<xsl:call-template name="list_class">
-					<xsl:with-param name="level" select="$level" />
-				</xsl:call-template>
+				<xsl:call-template name="list_class" />
+			<xsl:if test="$level = 2 and items">
+				<xsl:text>have_childe</xsl:text>
+			</xsl:if>
 			</xsl:attribute>
 			<a href="{@link}" umi:element-id="{@id}" umi:field-name="name" umi:field-type="string" umi:empty="&empty-name;" umi:url-attribute="href">
 				<xsl:if test="@link != '/'">
